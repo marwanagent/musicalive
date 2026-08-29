@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="One-on-one coaching that closes the gap between the music you hear in your head and what you play, with LA musician and educator Marwan Nassar." />
+  <meta name="description" content="One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play." />
   <link rel="canonical" href="https://joinmusicalive.com/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Music Alive" />
   <meta property="og:url" content="https://joinmusicalive.com/" />
-  <meta property="og:title" content="Music Alive: Play The Music That's In Your Head" />
-  <meta property="og:description" content="One-on-one coaching that closes the gap between the music you hear in your head and what you play, with LA musician and educator Marwan Nassar." />
+  <meta property="og:title" content="Music Alive: Play Music Like You Talk" />
+  <meta property="og:description" content="One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play." />
   <meta property="og:image" content="https://joinmusicalive.com/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Music Alive: Play The Music That's In Your Head" />
-  <meta name="twitter:description" content="One-on-one coaching that closes the gap between the music you hear in your head and what you play, with LA musician and educator Marwan Nassar." />
+  <meta name="twitter:title" content="Music Alive: Play Music Like You Talk" />
+  <meta name="twitter:description" content="One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play." />
   <meta name="twitter:image" content="https://joinmusicalive.com/og-image.png" />
 
-  <title>Music Alive: Play The Music That's In Your Head</title>
+  <title>Music Alive: Play Music Like You Talk</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -27,28 +27,31 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f4f0ea;
-      --gold: #a0762a;
+      --bg: #16110d;
+      --bg-soft: #1e1813;
+      --card: #241d16;
+      --gold: #d9b269;
+      --gold-strong: #e6c485;
       --gold-btn: #c8a96e;
-      --gold-btn-hover: #b8954e;
-      --dark: #1c1510;
-      --muted: #7a6e5e;
-      --body-text: #4a3f30;
-      --card-bg: #ede5d2;
-      --border: rgba(100, 80, 40, 0.18);
-      --form-bg: #ede5d2;
-      --form-border: rgba(100, 80, 40, 0.3);
+      --gold-btn-hover: #dcbd82;
+      --heading: #f2ece1;
+      --body-text: #c0b4a2;
+      --muted: #8d8271;
+      --border: rgba(217, 178, 105, 0.16);
+      --border-strong: rgba(217, 178, 105, 0.38);
+      --error: #e29078;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       background-color: var(--bg);
-      color: var(--dark);
+      color: var(--heading);
       font-family: 'DM Sans', sans-serif;
       font-weight: 300;
       line-height: 1.6;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* HERO */
@@ -57,7 +60,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 3rem 1.5rem 1rem;
+      padding: 4.5rem 1.5rem 2.5rem;
       position: relative;
       overflow: hidden;
     }
@@ -66,18 +69,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(160, 118, 42, 0.07) 0%, transparent 70%);
+      background: radial-gradient(ellipse 80% 55% at 50% 0%, rgba(217, 178, 105, 0.10) 0%, transparent 70%);
       pointer-events: none;
-    }
-
-    .eyebrow {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
     }
 
     h1 {
@@ -85,49 +78,50 @@
       font-size: clamp(3.4rem, 9vw, 7.5rem);
       line-height: 0.92;
       letter-spacing: 0.01em;
-      color: var(--dark);
-      max-width: 820px;
+      color: var(--heading);
+      max-width: 900px;
+      position: relative;
     }
 
     h1 span { color: var(--gold); }
-
-    .subhead {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      font-size: clamp(1rem, 2.2vw, 1.25rem);
-      color: var(--muted);
-      margin-top: 1.25rem;
-    }
 
     .hero-divider {
       width: 48px;
       height: 1px;
       background: var(--gold);
-      margin: 1.5rem auto;
-      opacity: 0.4;
+      margin: 2rem auto 1.75rem;
+      opacity: 0.5;
     }
 
-    .hero-body {
-      max-width: 520px;
-      font-size: 1.05rem;
+    .subheads {
+      list-style: none;
+      max-width: 620px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      position: relative;
+      text-align: left;
+    }
+
+    .subheads li {
+      font-size: clamp(1rem, 2.1vw, 1.18rem);
       color: var(--body-text);
-      line-height: 1.8;
+      line-height: 1.55;
+      padding-left: 1.4rem;
+      position: relative;
     }
 
-    .scroll-cta {
-      margin-top: 1.25rem;
-      display: inline-block;
-      font-size: 0.78rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(160, 118, 42, 0.35);
-      padding-bottom: 2px;
-      transition: border-color 0.2s;
+    .subheads li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.75;
     }
-
-    .scroll-cta:hover { border-color: var(--gold); }
 
     /* SECTION DIVIDER */
     .section-divider {
@@ -136,61 +130,54 @@
       margin: 0;
     }
 
-    /* CREDENTIALS */
-    .credentials-section {
-      padding: 2.5rem 1.5rem;
-      display: flex;
-      justify-content: center;
-    }
-
-    .credentials-inner {
-      max-width: 640px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .section-label {
-      font-size: 0.95rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-
-    .credentials-inner p {
-      font-size: 1.05rem;
-      color: var(--body-text);
-      line-height: 1.85;
-    }
-
     /* VIDEO */
     .video-section {
-      padding: 2rem 1.5rem 5rem;
+      padding: 3rem 1.5rem 3.5rem;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+      justify-content: center;
     }
 
     .video-wrap {
       width: 100%;
       max-width: 340px;
       aspect-ratio: 9 / 16;
-      border: 1px solid var(--border);
-      border-radius: 6px;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
       overflow: hidden;
+      background: #000;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
     }
 
     .video-wrap iframe {
       width: 100%;
       height: 100%;
       display: block;
+      border: 0;
+    }
+
+    /* CREDITS */
+    .credits-section {
+      padding: 3.5rem 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .credits-inner {
+      max-width: 680px;
+      text-align: center;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      color: var(--body-text);
+      line-height: 1.85;
+    }
+
+    .credits-inner strong {
+      color: var(--gold);
+      font-weight: 500;
     }
 
     /* TESTIMONIALS */
     .testimonials-section {
-      padding: 5rem 1.5rem;
+      padding: 3.5rem 1.5rem 4.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -201,9 +188,9 @@
       max-width: 480px;
       width: 100%;
       border-left: 3px solid var(--gold-btn);
-      border-radius: 0 6px 6px 0;
+      border-radius: 0 8px 8px 0;
       overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     }
 
     .testimonial-screenshot img {
@@ -212,59 +199,155 @@
       display: block;
     }
 
-    .testimonial-quote {
-      max-width: 480px;
-      width: 100%;
-      background: var(--card-bg);
-      border-left: 3px solid rgba(160, 118, 42, 0.45);
-      padding: 1.5rem 1.75rem;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .testimonial-quote p {
-      font-size: 1rem;
-      color: var(--body-text);
-      line-height: 1.8;
-      font-style: italic;
-    }
-
-    /* FORM SECTION */
-    .form-section {
-      padding: 0.5rem 1.5rem 3rem;
+    /* CTA / FORM */
+    .cta-section {
+      padding: 4rem 1.5rem;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cta-inner {
+      width: 100%;
+      max-width: 520px;
       text-align: center;
     }
 
-    .form-section h2 {
+    .cta-inner h2 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-size: clamp(2.4rem, 6vw, 4rem);
       line-height: 1;
-      color: var(--dark);
-      max-width: 560px;
-      margin-bottom: 0.75rem;
+      color: var(--heading);
+      letter-spacing: 0.01em;
     }
 
-    .form-section .form-sub {
-      font-size: 0.95rem;
+    .form-mount { margin-top: 2rem; }
+
+    .progress {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 2.5rem;
-      max-width: 420px;
-      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      min-height: 1em;
     }
 
-    /* MULTI-STEP FORM */
-    .step { display: none; flex-direction: column; gap: 0.85rem; width: 100%; max-width: 420px; }
-    .step.active { display: flex; }
+    .screen { display: none; text-align: left; }
+    .screen.active { display: block; }
+
+    .question {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: var(--heading);
+      margin-bottom: 0.35rem;
+      border: 0;
+      padding: 0;
+    }
+
+    .question-hint {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    fieldset { border: 0; padding: 0; margin: 0; }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .opt {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.9rem 1.1rem;
+      cursor: pointer;
+      transition: border-color 0.18s, background 0.18s;
+      font-size: 0.98rem;
+      color: var(--body-text);
+      line-height: 1.4;
+    }
+
+    .opt:hover { border-color: var(--border-strong); }
+
+    .opt input {
+      appearance: none;
+      -webkit-appearance: none;
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--border-strong);
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+      transition: border-color 0.18s, background 0.18s;
+    }
+
+    .opt input[type="radio"] { border-radius: 50%; }
+    .opt input[type="checkbox"] { border-radius: 4px; }
+
+    .opt input:checked {
+      border-color: var(--gold);
+      background: var(--gold);
+    }
+
+    .opt input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      background: var(--bg);
+    }
+
+    .opt input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 5px;
+      height: 10px;
+      border: solid var(--bg);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .opt:has(input:checked) {
+      border-color: var(--gold);
+      background: rgba(217, 178, 105, 0.09);
+      color: var(--heading);
+    }
+
+    .opt input:focus-visible { outline: 2px solid var(--gold-strong); outline-offset: 2px; }
+
+    /* TEXT INPUTS */
+    .field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.85rem; }
+
+    .field label {
+      font-size: 0.85rem;
+      color: var(--body-text);
+      line-height: 1.5;
+    }
+
+    .field .optional { color: var(--muted); }
 
     input[type="text"],
     input[type="email"],
-    input[type="tel"] {
-      background: var(--form-bg);
-      border: 1px solid var(--form-border);
-      border-radius: 4px;
-      color: var(--dark);
+    input[type="tel"],
+    input[type="url"],
+    textarea {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--heading);
       font-family: 'DM Sans', sans-serif;
       font-size: 1rem;
       font-weight: 300;
@@ -274,68 +357,115 @@
       transition: border-color 0.2s;
     }
 
-    input::placeholder { color: #b0a08a; }
-    input:focus { border-color: var(--gold); }
+    textarea { resize: vertical; min-height: 96px; line-height: 1.6; }
 
-    .step-btn {
-      background: var(--gold-btn);
-      color: #fff;
+    input::placeholder, textarea::placeholder { color: #6f6455; }
+    input:focus, textarea:focus { border-color: var(--gold); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+
+    /* BUTTONS */
+    .actions {
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+      margin-top: 1.4rem;
+    }
+
+    .btn {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.3rem;
       letter-spacing: 0.08em;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       padding: 0.95rem 1.5rem;
       cursor: pointer;
-      width: 100%;
-      transition: background 0.2s, transform 0.1s;
-      margin-top: 0.1rem;
+      transition: background 0.2s, transform 0.1s, border-color 0.2s, color 0.2s;
+      line-height: 1.1;
     }
 
-    .step-btn:hover { background: var(--gold-btn-hover); }
-    .step-btn:active { transform: scale(0.99); }
-    .step-btn:disabled { background: #c0b090; cursor: not-allowed; }
+    .btn-primary {
+      background: var(--gold-btn);
+      color: #1a140f;
+      flex: 1 1 auto;
+    }
+
+    .btn-primary:hover { background: var(--gold-btn-hover); }
+    .btn-primary:active { transform: scale(0.99); }
+    .btn-primary:disabled { background: #6d604a; color: #b9ad99; cursor: not-allowed; }
+
+    .btn-back {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      flex: 0 0 auto;
+      font-size: 1.1rem;
+      padding: 0.9rem 1.2rem;
+    }
+
+    .btn-back:hover { color: var(--heading); border-color: var(--border-strong); }
+
+    .btn:focus-visible { outline: 2px solid var(--gold-strong); outline-offset: 2px; }
 
     .form-note {
       font-size: 0.75rem;
-      color: #b0a08a;
-      margin-top: 0.25rem;
-    }
-
-    #form-success, #form-success-2 {
-      display: none;
-      background: var(--card-bg);
-      border: 1px solid rgba(160, 118, 42, 0.3);
-      border-radius: 6px;
-      padding: 1.5rem;
-      color: var(--body-text);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 420px;
-      width: 100%;
+      color: var(--muted);
+      margin-top: 0.9rem;
+      text-align: center;
     }
 
     .form-error {
       display: none;
-      color: #9a3a2a;
+      color: var(--error);
       font-size: 0.85rem;
-      margin-top: 0.25rem;
+      margin-top: 0.85rem;
+    }
+
+    .notice {
+      background: var(--card);
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      padding: 1.6rem;
+      color: var(--body-text);
+      font-size: 1rem;
+      line-height: 1.75;
+      text-align: left;
+    }
+
+    .notice strong {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.03em;
+      color: var(--heading);
+      font-weight: 400;
+      margin-bottom: 0.5rem;
     }
 
     /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
       text-align: center;
       font-size: 0.78rem;
-      color: #b0a080;
+      color: var(--muted);
       letter-spacing: 0.05em;
     }
 
+    noscript p {
+      max-width: 520px;
+      margin: 0 auto;
+      color: var(--body-text);
+      font-size: 0.95rem;
+    }
+
+    noscript a { color: var(--gold); }
+
     @media (max-width: 600px) {
-      .hero { padding: 3rem 1.25rem 1.5rem; }
-      .testimonial-screenshot,
-      .testimonial-quote { max-width: 100%; }
+      .hero { padding: 3.5rem 1.25rem 2rem; }
+      .testimonial-screenshot { max-width: 100%; }
+      .grid-2 { grid-template-columns: 1fr; gap: 0; }
+      .cta-section { padding: 3rem 1.25rem; }
     }
   </style>
 
@@ -361,7 +491,7 @@
         "@id": "https://joinmusicalive.com/#marwan",
         "name": "Marwan Nassar",
         "jobTitle": "Musician and Music Educator",
-        "description": "Marwan Nassar is a Los Angeles-based musician and educator who has shared stages and studios with Grammy-winning artists, Bootie Brown of The Pharcyde, and Breakestra, performed at SXSW, and brought his work to international audiences. He created Music Alive to help adult musicians close the gap between the music they hear and the music they actually play.",
+        "description": "Musician and educator. Credits include GRAMMY winners Matt B and Keznamdi, The Pharcyde's Bootie Brown, 90s soul funk legends Breakestra, and Jessica Domingo (JDOM).",
         "worksFor": { "@id": "https://treehousemusic.org/#organization" },
         "sameAs": [
           "https://www.instagram.com/marwan.music/"
@@ -387,8 +517,8 @@
         "@type": "WebPage",
         "@id": "https://joinmusicalive.com/#webpage",
         "url": "https://joinmusicalive.com/",
-        "name": "Music Alive: Play The Music That's In Your Head",
-        "description": "One-on-one coaching that closes the gap between the music you hear in your head and what you play, with LA musician and educator Marwan Nassar.",
+        "name": "Music Alive: Play Music Like You Talk",
+        "description": "One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play.",
         "inLanguage": "en",
         "isPartOf": { "@id": "https://joinmusicalive.com/#website" },
         "about": { "@id": "https://joinmusicalive.com/#service" },
@@ -415,7 +545,7 @@
         "@type": "VideoObject",
         "@id": "https://joinmusicalive.com/#video",
         "name": "Music Alive: Marwan Nassar",
-        "description": "See how Music Alive's one-on-one coaching works, with Los Angeles musician and educator Marwan Nassar.",
+        "description": "Marwan Nassar introduces Music Alive, one-on-one coaching for musicians who want to improvise in any genre and learn by ear on the spot.",
         "thumbnailUrl": "https://i.ytimg.com/vi/QQeSR6mP7M0/maxresdefault.jpg",
         "uploadDate": "2026-06-14",
         "embedUrl": "https://www.youtube.com/embed/QQeSR6mP7M0",
@@ -430,132 +560,71 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="eyebrow">Music Alive with Marwan Nassar</p>
-    <h1>Play The Music<br><span>That's In Your Head</span></h1>
-    <p class="subhead">and understand the language of music</p>
+    <h1>Play Music<br><span>Like You Talk</span></h1>
     <div class="hero-divider"></div>
-    <p class="hero-body">
-      You already hear the music. The ideas are there. What's missing is the bridge between what you imagine and what you actually play. That's what we work on here.
-    </p>
-    <a class="scroll-cta" href="#watch">See how it works</a>
+    <ul class="subheads">
+      <li>Play in any genre</li>
+      <li>Learn music by ear on the spot in any key</li>
+      <li>Learn to groove so that it feels good when people hear you play</li>
+      <li>Picking up your instrument feels good</li>
+      <li>Understand theory in a way that actually helps you play better</li>
+    </ul>
   </section>
-
-  <hr class="section-divider" />
-
-  <!-- FORM -->
-  <section class="form-section" id="join">
-    <h2>Ready to play what you actually hear?</h2>
-    <p class="form-sub">Drop your info and I'll send you a free custom video answering any music question you have (Doing this for a limited number of people). You also get a free series on playing the music in your head.</p>
-
-    <div id="form-success">
-      You're in. Check your inbox (or spam folder, just in case) for what's next. See you soon.
-    </div>
-
-    <!-- Step 1: Name -->
-    <div class="step active" id="step-1">
-      <input type="text" id="first_name" placeholder="First name" autocomplete="given-name" />
-      <button class="step-btn" onclick="nextStep(1)">Get Started</button>
-      <p class="form-error" id="err-1">Please enter your first name.</p>
-    </div>
-
-    <!-- Step 2: Email -->
-    <div class="step" id="step-2">
-      <input type="email" id="email" placeholder="Email address" autocomplete="email" />
-      <button class="step-btn" onclick="nextStep(2)">Continue</button>
-      <p class="form-error" id="err-2">Please enter a valid email address.</p>
-    </div>
-
-    <!-- Step 3: Phone -->
-    <div class="step" id="step-3">
-      <input type="tel" id="phone" placeholder="Phone number" autocomplete="tel" />
-      <button class="step-btn" id="submit-btn" onclick="submitForm()">Transform Your Playing Now</button>
-      <p class="form-error" id="err-3">Please enter your phone number.</p>
-      <p class="form-note">No spam. Unsubscribe any time.</p>
-    </div>
-
-  </section>
-
-  <!-- CREDENTIALS -->
-  <section class="credentials-section">
-    <div class="credentials-inner">
-      <span class="section-label">About Marwan</span>
-      <p>Marwan Nassar is a Los Angeles-based musician and educator who has shared stages and studios with Grammy-winning artists, Bootie Brown of The Pharcyde, and Breakestra, performed at SXSW, and brought his work to international audiences. He created Music Alive to help adult musicians close the gap between the music they hear and the music they actually play.</p>
-    </div>
-  </section>
-
-  <hr class="section-divider" />
 
   <!-- VIDEO -->
-  <section class="video-section" id="watch">
-    <span class="section-label">See how it works</span>
+  <section class="video-section">
     <div class="video-wrap">
       <iframe
         src="https://www.youtube.com/embed/QQeSR6mP7M0"
         title="Music Alive: Marwan Nassar"
-        frameborder="0"
+        loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
     </div>
   </section>
 
-  <hr class="section-divider" />
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials-section">
-    <span class="section-label">What people are saying</span>
-
-    <div class="testimonial-screenshot">
-      <img src="testimonial.png" alt="Student testimonial" />
+  <!-- CTA ONE -->
+  <section class="cta-section" id="join">
+    <div class="cta-inner">
+      <h2>Ready to get started?</h2>
+      <div class="form-mount" data-form="a"></div>
+      <noscript>
+        <p>This application needs JavaScript. Email <a href="mailto:marwan@treehousemusic.org">marwan@treehousemusic.org</a> and we will take it from there.</p>
+      </noscript>
     </div>
+  </section>
 
-    <div class="testimonial-screenshot">
-      <img src="testimonial2.jpg" alt="Andy M. Yelp review" />
-    </div>
-    
-    <div class="testimonial-screenshot">
-      <img src="testimonial3.jpg" alt="Student testimonial" />
-    </div>
-
-    <div class="testimonial-quote">
-      <p>"For the first time, what I hear in my head and what comes out of my hands are starting to match."</p>
-    </div>
-
+  <!-- CREDITS -->
+  <section class="credits-section">
+    <p class="credits-inner">
+      <strong>Credits include:</strong> GRAMMY winners Matt B and Keznamdi, The Pharcyde's Bootie Brown, 90s soul funk legends Breakestra, and Jessica Domingo (JDOM)
+    </p>
   </section>
 
   <hr class="section-divider" />
 
-  <!-- FORM (SECOND INSTANCE) -->
-  <section class="form-section" id="join-2">
-    <h2>Ready to play what you actually hear?</h2>
-    <p class="form-sub">Drop your info and I'll send you a free custom video answering any music question you have (Doing this for a limited number of people). You also get a free series on playing the music in your head.</p>
-
-    <div id="form-success-2">
-      You're in. Check your inbox (or spam folder, just in case) for what's next. See you soon.
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="testimonial-screenshot">
+      <img src="testimonial.png" alt="Student testimonial" loading="lazy" />
     </div>
 
-    <!-- Step 1: Name -->
-    <div class="step active" id="step-1-2">
-      <input type="text" id="first_name-2" placeholder="First name" autocomplete="given-name" />
-      <button class="step-btn" onclick="nextStep(1, '-2')">Get Started</button>
-      <p class="form-error" id="err-1-2">Please enter your first name.</p>
+    <div class="testimonial-screenshot">
+      <img src="testimonial2.jpg" alt="Andy M. Yelp review" loading="lazy" />
     </div>
 
-    <!-- Step 2: Email -->
-    <div class="step" id="step-2-2">
-      <input type="email" id="email-2" placeholder="Email address" autocomplete="email" />
-      <button class="step-btn" onclick="nextStep(2, '-2')">Continue</button>
-      <p class="form-error" id="err-2-2">Please enter a valid email address.</p>
+    <div class="testimonial-screenshot">
+      <img src="testimonial3.jpg" alt="Student testimonial" loading="lazy" />
     </div>
+  </section>
 
-    <!-- Step 3: Phone -->
-    <div class="step" id="step-3-2">
-      <input type="tel" id="phone-2" placeholder="Phone number" autocomplete="tel" />
-      <button class="step-btn" id="submit-btn-2" onclick="submitForm('-2')">Transform Your Playing Now</button>
-      <p class="form-error" id="err-3-2">Please enter your phone number.</p>
-      <p class="form-note">No spam. Unsubscribe any time.</p>
+  <!-- CTA TWO -->
+  <section class="cta-section" id="join-2">
+    <div class="cta-inner">
+      <h2>Ready to get started?</h2>
+      <div class="form-mount" data-form="b"></div>
     </div>
-
   </section>
 
   <!-- FOOTER -->
@@ -564,77 +633,289 @@
   </footer>
 
   <script>
-    const KIT_API_KEY = 'qrm6v3Hepc7nwHS8ckAU6g'
+    const KIT_API_KEY = 'qrm6v3Hepc7nwHS8ckAU6g';
     const KIT_FORM_ID = '9630754';
 
-    function showError(id, msg) {
-      const el = document.getElementById(id);
-      el.textContent = msg;
-      el.style.display = 'block';
+    const Q1_OPTIONS = [
+      'College student',
+      'Adult hobbyist',
+      'Pro or semi-pro musician',
+      'Coming back to music after a break'
+    ];
+
+    const Q2_OPTIONS = [
+      'Improvisation and soloing',
+      'Practical theory',
+      'Ears and learning by ear',
+      'Speed and chops',
+      'Pocket and groove'
+    ];
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
     }
 
-    function hideError(id) {
-      document.getElementById(id).style.display = 'none';
+    function buildFormHtml(ns) {
+      const radios = Q1_OPTIONS.map(function (opt, i) {
+        return '<label class="opt"><input type="radio" name="' + ns + '-q1" value="' + escapeHtml(opt) + '" id="' + ns + '-q1-' + i + '" /><span>' + escapeHtml(opt) + '</span></label>';
+      }).join('');
+
+      const checks = Q2_OPTIONS.map(function (opt, i) {
+        return '<label class="opt"><input type="checkbox" name="' + ns + '-q2" value="' + escapeHtml(opt) + '" id="' + ns + '-q2-' + i + '" /><span>' + escapeHtml(opt) + '</span></label>';
+      }).join('');
+
+      return [
+        '<p class="progress" data-role="progress"></p>',
+
+        // Screen 0: intro
+        '<div class="screen active" data-screen="0">',
+        '  <div class="actions"><button type="button" class="btn btn-primary" data-action="next">Next</button></div>',
+        '</div>',
+
+        // Screen 1: Q1
+        '<div class="screen" data-screen="1">',
+        '  <fieldset>',
+        '    <legend class="question">What best describes you?</legend>',
+        '    <p class="question-hint">Choose one.</p>',
+        '    <div class="options">' + radios + '</div>',
+        '  </fieldset>',
+        '  <p class="form-error" data-role="error"></p>',
+        '  <div class="actions">',
+        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
+        '    <button type="button" class="btn btn-primary" data-action="next">Next</button>',
+        '  </div>',
+        '</div>',
+
+        // Screen 2: Q2
+        '<div class="screen" data-screen="2">',
+        '  <fieldset>',
+        '    <legend class="question">What are you most interested in improving over the next 12 months?</legend>',
+        '    <p class="question-hint">Choose as many as you like.</p>',
+        '    <div class="options">' + checks + '</div>',
+        '  </fieldset>',
+        '  <p class="form-error" data-role="error"></p>',
+        '  <div class="actions">',
+        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
+        '    <button type="button" class="btn btn-primary" data-action="next">Next</button>',
+        '  </div>',
+        '</div>',
+
+        // Screen 3: Q3
+        '<div class="screen" data-screen="3">',
+        '  <fieldset>',
+        '    <legend class="question">Are you ready to spend time and money getting to where you want to go?</legend>',
+        '    <div class="options">',
+        '      <label class="opt"><input type="radio" name="' + ns + '-q3" value="Yes" /><span>Yes</span></label>',
+        '      <label class="opt"><input type="radio" name="' + ns + '-q3" value="No" /><span>No</span></label>',
+        '    </div>',
+        '  </fieldset>',
+        '  <p class="form-error" data-role="error"></p>',
+        '  <div class="actions">',
+        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
+        '    <button type="button" class="btn btn-primary" data-action="next">Next</button>',
+        '  </div>',
+        '</div>',
+
+        // Screen 4: details
+        '<div class="screen" data-screen="4">',
+        '  <div class="grid-2">',
+        '    <div class="field"><label for="' + ns + '-first">First name</label><input type="text" id="' + ns + '-first" autocomplete="given-name" /></div>',
+        '    <div class="field"><label for="' + ns + '-last">Last name</label><input type="text" id="' + ns + '-last" autocomplete="family-name" /></div>',
+        '  </div>',
+        '  <div class="field"><label for="' + ns + '-email">Email address</label><input type="email" id="' + ns + '-email" autocomplete="email" /></div>',
+        '  <div class="field"><label for="' + ns + '-phone">Phone number</label><input type="tel" id="' + ns + '-phone" autocomplete="tel" /></div>',
+        '  <div class="field">',
+        '    <label for="' + ns + '-rec">Do you have recordings of yourself playing? <span class="optional">(optional, paste a link)</span></label>',
+        '    <input type="url" id="' + ns + '-rec" placeholder="Google Drive, YouTube, SoundCloud, Instagram" />',
+        '  </div>',
+        '  <div class="field">',
+        '    <label for="' + ns + '-dream">What would your dream version look like for your musicianship 12 months from now?</label>',
+        '    <textarea id="' + ns + '-dream" rows="4"></textarea>',
+        '  </div>',
+        '  <p class="form-error" data-role="error"></p>',
+        '  <div class="actions">',
+        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
+        '    <button type="button" class="btn btn-primary" data-action="submit">Submit</button>',
+        '  </div>',
+        '  <p class="form-note">No spam. Unsubscribe any time.</p>',
+        '</div>',
+
+        // Screen 5: disqualified
+        '<div class="screen" data-screen="5">',
+        '  <div class="notice">',
+        '    <strong>Thank you for your interest.</strong>',
+        '    We are currently only accepting musicians with the time and resources to improve their musicianship over the next 6-12 months.',
+        '  </div>',
+        '  <div class="actions"><button type="button" class="btn btn-back" data-action="back">Back</button></div>',
+        '</div>',
+
+        // Screen 6: success
+        '<div class="screen" data-screen="6">',
+        '  <div class="notice">',
+        '    <strong>You are in.</strong>',
+        '    Check your inbox (or spam folder, just in case) for what comes next. Talk soon.',
+        '  </div>',
+        '</div>'
+      ].join('');
     }
 
-    function nextStep(current, suffix = '') {
-      if (current === 1) {
-        const val = document.getElementById('first_name' + suffix).value.trim();
-        if (!val) { showError('err-1' + suffix, 'Please enter your first name.'); return; }
-        hideError('err-1' + suffix);
+    function initForm(mount) {
+      const ns = mount.getAttribute('data-form');
+      mount.innerHTML = buildFormHtml(ns);
+
+      const screens = mount.querySelectorAll('[data-screen]');
+      const progress = mount.querySelector('[data-role="progress"]');
+      const TOTAL = 4;
+      let current = 0;
+      const history = [];
+
+      function get(id) { return mount.querySelector('#' + ns + '-' + id); }
+      function val(id) { return get(id).value.trim(); }
+
+      function showError(screen, msg) {
+        const el = screen.querySelector('[data-role="error"]');
+        if (!el) return;
+        el.textContent = msg;
+        el.style.display = 'block';
       }
-      if (current === 2) {
-        const val = document.getElementById('email' + suffix).value.trim();
-        if (!val || !val.includes('@')) { showError('err-2' + suffix, 'Please enter a valid email address.'); return; }
-        hideError('err-2' + suffix);
+
+      function clearError(screen) {
+        const el = screen.querySelector('[data-role="error"]');
+        if (el) el.style.display = 'none';
       }
-      document.getElementById('step-' + current + suffix).classList.remove('active');
-      document.getElementById('step-' + (current + 1) + suffix).classList.add('active');
-    }
 
-    async function submitForm(suffix = '') {
-      const phone = document.getElementById('phone' + suffix).value.trim();
-      if (!phone) { showError('err-3' + suffix, 'Please enter your phone number.'); return; }
-      hideError('err-3' + suffix);
-
-      const firstName = document.getElementById('first_name' + suffix).value.trim();
-      const email = document.getElementById('email' + suffix).value.trim();
-      const btn = document.getElementById('submit-btn' + suffix);
-
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-
-      const payload = {
-        api_key: KIT_API_KEY,
-        email: email,
-        first_name: firstName,
-        fields: { phone_number: phone }
-      };
-
-      try {
-        const response = await fetch(
-          `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json; charset=utf-8' },
-            body: JSON.stringify(payload)
-          }
-        );
-
-        const data = await response.json();
-
-        if (response.ok && data.subscription) {
-          document.getElementById('step-3' + suffix).style.display = 'none';
-          document.getElementById('form-success' + suffix).style.display = 'block';
+      function render() {
+        screens.forEach(function (s) {
+          s.classList.toggle('active', Number(s.getAttribute('data-screen')) === current);
+        });
+        if (current >= 1 && current <= TOTAL) {
+          progress.textContent = 'Step ' + current + ' of ' + TOTAL;
         } else {
-          throw new Error(data.message || 'Submission failed');
+          progress.textContent = '';
         }
-      } catch (err) {
-        showError('err-3' + suffix, 'Something went wrong. Please try again or email marwan@treehousemusic.org.');
-        btn.disabled = false;
-        btn.textContent = 'Transform Your Playing Now';
       }
+
+      function goTo(next) {
+        history.push(current);
+        current = next;
+        render();
+      }
+
+      function goBack() {
+        if (!history.length) return;
+        current = history.pop();
+        render();
+      }
+
+      function checkedValue(name) {
+        const el = mount.querySelector('input[name="' + ns + '-' + name + '"]:checked');
+        return el ? el.value : '';
+      }
+
+      function checkedValues(name) {
+        return Array.prototype.map.call(
+          mount.querySelectorAll('input[name="' + ns + '-' + name + '"]:checked'),
+          function (el) { return el.value; }
+        );
+      }
+
+      function validateAndAdvance(screen) {
+        clearError(screen);
+
+        if (current === 0) { goTo(1); return; }
+
+        if (current === 1) {
+          if (!checkedValue('q1')) { showError(screen, 'Please choose the option that best describes you.'); return; }
+          goTo(2); return;
+        }
+
+        if (current === 2) {
+          if (!checkedValues('q2').length) { showError(screen, 'Please choose at least one.'); return; }
+          goTo(3); return;
+        }
+
+        if (current === 3) {
+          const answer = checkedValue('q3');
+          if (!answer) { showError(screen, 'Please choose yes or no.'); return; }
+          goTo(answer === 'Yes' ? 4 : 5);
+          return;
+        }
+      }
+
+      async function submit(screen, btn) {
+        clearError(screen);
+
+        const first = val('first');
+        const last = val('last');
+        const email = val('email');
+        const phone = val('phone');
+        const dream = val('dream');
+
+        if (!first) { showError(screen, 'Please enter your first name.'); return; }
+        if (!last) { showError(screen, 'Please enter your last name.'); return; }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError(screen, 'Please enter a valid email address.'); return; }
+        if (!phone) { showError(screen, 'Please enter your phone number.'); return; }
+        if (!dream) { showError(screen, 'Please tell us what your dream version looks like.'); return; }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        const payload = {
+          api_key: KIT_API_KEY,
+          email: email,
+          first_name: first,
+          fields: {
+            last_name: last,
+            phone_number: phone,
+            describes_you: checkedValue('q1'),
+            improve_focus: checkedValues('q2').join(', '),
+            ready_to_invest: checkedValue('q3'),
+            recordings_link: val('rec'),
+            dream_12_months: dream
+          }
+        };
+
+        try {
+          const response = await fetch(
+            'https://api.convertkit.com/v3/forms/' + KIT_FORM_ID + '/subscribe',
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json; charset=utf-8' },
+              body: JSON.stringify(payload)
+            }
+          );
+
+          const data = await response.json();
+
+          if (response.ok && data.subscription) {
+            goTo(6);
+          } else {
+            throw new Error(data.message || 'Submission failed');
+          }
+        } catch (err) {
+          showError(screen, 'Something went wrong. Please try again or email marwan@treehousemusic.org.');
+          btn.disabled = false;
+          btn.textContent = 'Submit';
+        }
+      }
+
+      mount.addEventListener('click', function (e) {
+        const btn = e.target.closest('[data-action]');
+        if (!btn) return;
+        const screen = btn.closest('[data-screen]');
+        const action = btn.getAttribute('data-action');
+
+        if (action === 'back') { goBack(); return; }
+        if (action === 'next') { validateAndAdvance(screen); return; }
+        if (action === 'submit') { submit(screen, btn); return; }
+      });
+
+      render();
     }
+
+    document.querySelectorAll('.form-mount').forEach(initForm);
   </script>
 
 </body>
