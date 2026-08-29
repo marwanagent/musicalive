@@ -633,8 +633,7 @@
   </footer>
 
   <script>
-    const KIT_API_KEY = 'qrm6v3Hepc7nwHS8ckAU6g';
-    const KIT_FORM_ID = '9630754';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xljeeqen';
 
     const Q1_OPTIONS = [
       'College student',
@@ -863,36 +862,34 @@
         btn.textContent = 'Sending...';
 
         const payload = {
-          api_key: KIT_API_KEY,
-          email: email,
+          _subject: 'New Music Alive application',
           first_name: first,
-          fields: {
-            last_name: last,
-            phone_number: phone,
-            describes_you: checkedValue('q1'),
-            improve_focus: checkedValues('q2').join(', '),
-            ready_to_invest: checkedValue('q3'),
-            recordings_link: val('rec'),
-            dream_12_months: dream
-          }
+          last_name: last,
+          email: email,
+          phone_number: phone,
+          describes_you: checkedValue('q1'),
+          improve_focus: checkedValues('q2').join(', '),
+          ready_to_invest: checkedValue('q3'),
+          recordings_link: val('rec'),
+          dream_12_months: dream
         };
 
         try {
-          const response = await fetch(
-            'https://api.convertkit.com/v3/forms/' + KIT_FORM_ID + '/subscribe',
-            {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json; charset=utf-8' },
-              body: JSON.stringify(payload)
-            }
-          );
+          const response = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
 
-          const data = await response.json();
-
-          if (response.ok && data.subscription) {
+          if (response.ok) {
             goTo(6);
           } else {
-            throw new Error(data.message || 'Submission failed');
+            const data = await response.json().catch(function () { return {}; });
+            const message = data.errors ? data.errors.map(function (e) { return e.message; }).join(', ') : 'Submission failed';
+            throw new Error(message);
           }
         } catch (err) {
           showError(screen, 'Something went wrong. Please try again or email marwan@treehousemusic.org.');
