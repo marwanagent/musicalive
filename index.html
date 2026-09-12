@@ -134,7 +134,9 @@
     .video-section {
       padding: 3rem 1.5rem 3.5rem;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.75rem;
     }
 
     .video-wrap {
@@ -153,6 +155,19 @@
       height: 100%;
       display: block;
       border: 0;
+    }
+
+    .luma-wrap {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .luma-wrap iframe {
+      width: 100%;
+      height: 450px;
+      display: block;
+      border: 1px solid #bfcbda88;
+      border-radius: 4px;
     }
 
     /* CREDITS */
@@ -221,6 +236,13 @@
       line-height: 1;
       color: var(--heading);
       letter-spacing: 0.01em;
+    }
+
+    .cta-spots {
+      margin-top: 0.85rem;
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      color: var(--gold);
+      letter-spacing: 0.04em;
     }
 
     .form-mount { margin-top: 2rem; }
@@ -589,12 +611,26 @@
         allowfullscreen>
       </iframe>
     </div>
+    <div class="luma-wrap">
+      <iframe
+        src="https://luma.com/embed/event/evt-npdGDXlo6CqlBue/simple"
+        width="600"
+        height="450"
+        frameborder="0"
+        style="border: 1px solid #bfcbda88; border-radius: 4px;"
+        allow="fullscreen; payment"
+        aria-hidden="false"
+        tabindex="0"
+        title="Music Alive event on Luma">
+      </iframe>
+    </div>
   </section>
 
   <!-- CTA ONE -->
   <section class="cta-section" id="join">
     <div class="cta-inner">
-      <h2>Ready to get started?</h2>
+      <h2>Looking for more 1-on-1 guidance?</h2>
+      <p class="cta-spots">Limited spots available</p>
       <div class="form-mount" data-form="a"></div>
       <noscript>
         <p>This application needs JavaScript. Email <a href="mailto:marwan@treehousemusic.org">marwan@treehousemusic.org</a> and we will take it from there.</p>
@@ -629,7 +665,8 @@
   <!-- CTA TWO -->
   <section class="cta-section" id="join-2">
     <div class="cta-inner">
-      <h2>Ready to get started?</h2>
+      <h2>Looking for more 1-on-1 guidance?</h2>
+      <p class="cta-spots">Limited spots available</p>
       <div class="form-mount" data-form="b"></div>
     </div>
   </section>
