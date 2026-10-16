@@ -10,16 +10,16 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Music Alive" />
   <meta property="og:url" content="https://joinmusicalive.com/" />
-  <meta property="og:title" content="Music Alive: Feel Like a Real Musician" />
+  <meta property="og:title" content="Feel Like a Real Musician" />
   <meta property="og:description" content="Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts." />
   <meta property="og:image" content="https://joinmusicalive.com/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Music Alive: Feel Like a Real Musician" />
+  <meta name="twitter:title" content="Feel Like a Real Musician" />
   <meta name="twitter:description" content="Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts." />
   <meta name="twitter:image" content="https://joinmusicalive.com/og-image.png" />
 
-  <title>Music Alive: Feel Like a Real Musician</title>
+  <title>Feel Like a Real Musician</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -27,6 +27,23 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
+      --bg: #ffffff;
+      --bg-soft: #faf6ee;
+      --card: #ffffff;
+      --gold: #a87c2b;
+      --gold-strong: #8f6820;
+      --gold-btn: #c8a96e;
+      --gold-btn-hover: #dcbd82;
+      --heading: #16110d;
+      --body-text: #3b3128;
+      --muted: #7a6e5e;
+      --border: rgba(168, 124, 43, 0.22);
+      --border-strong: rgba(168, 124, 43, 0.45);
+      --error: #b4472c;
+    }
+
+    /* Dark highlight bands in the original Music Alive palette */
+    .cta-section {
       --bg: #16110d;
       --bg-soft: #1e1813;
       --card: #241d16;
@@ -69,7 +86,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 80% 55% at 50% 0%, rgba(217, 178, 105, 0.10) 0%, transparent 70%);
+      background: radial-gradient(ellipse 80% 55% at 50% 0%, rgba(200, 169, 110, 0.16) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -103,7 +120,7 @@
     }
 
     .audience p {
-      font-size: clamp(1rem, 2.1vw, 1.12rem);
+      font-size: clamp(1.1rem, 2.4vw, 1.25rem);
       color: var(--body-text);
       line-height: 1.6;
     }
@@ -127,8 +144,9 @@
     }
 
     .subheads li {
-      font-size: clamp(1rem, 2.1vw, 1.18rem);
+      font-size: clamp(1.18rem, 2.6vw, 1.4rem);
       color: var(--body-text);
+      font-weight: 400;
       line-height: 1.55;
       padding-left: 1.4rem;
       position: relative;
@@ -138,9 +156,9 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 0.62em;
-      width: 6px;
-      height: 6px;
+      top: 0.55em;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--gold);
       opacity: 0.75;
@@ -170,7 +188,7 @@
       border-radius: 8px;
       overflow: hidden;
       background: #000;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 18px 45px rgba(22, 17, 13, 0.25);
     }
 
     .video-wrap iframe {
@@ -236,7 +254,7 @@
       border-left: 3px solid var(--gold-btn);
       border-radius: 0 8px 8px 0;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 10px 30px rgba(22, 17, 13, 0.18);
     }
 
     .testimonial-screenshot img {
@@ -250,7 +268,8 @@
       padding: 4rem 1.5rem;
       display: flex;
       justify-content: center;
-      background: var(--bg-soft);
+      background: var(--bg);
+      color: var(--heading);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
@@ -445,7 +464,7 @@
         "@type": "WebPage",
         "@id": "https://joinmusicalive.com/#webpage",
         "url": "https://joinmusicalive.com/",
-        "name": "Music Alive: Feel Like a Real Musician",
+        "name": "Feel Like a Real Musician",
         "description": "Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts.",
         "inLanguage": "en",
         "isPartOf": { "@id": "https://joinmusicalive.com/#website" },
