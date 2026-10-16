@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play." />
+  <meta name="description" content="Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts." />
   <link rel="canonical" href="https://joinmusicalive.com/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Music Alive" />
   <meta property="og:url" content="https://joinmusicalive.com/" />
-  <meta property="og:title" content="Music Alive: Play What You Hear" />
-  <meta property="og:description" content="One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play." />
+  <meta property="og:title" content="Music Alive: Feel Like a Real Musician" />
+  <meta property="og:description" content="Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts." />
   <meta property="og:image" content="https://joinmusicalive.com/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Music Alive: Play What You Hear" />
-  <meta name="twitter:description" content="One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play." />
+  <meta name="twitter:title" content="Music Alive: Feel Like a Real Musician" />
+  <meta name="twitter:description" content="Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts." />
   <meta name="twitter:image" content="https://joinmusicalive.com/og-image.png" />
 
-  <title>Music Alive: Play What You Hear</title>
+  <title>Music Alive: Feel Like a Real Musician</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -75,8 +75,8 @@
 
     h1 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3.4rem, 9vw, 7.5rem);
-      line-height: 0.92;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
       letter-spacing: 0.01em;
       color: var(--heading);
       max-width: 900px;
@@ -84,6 +84,29 @@
     }
 
     h1 span { color: var(--gold); }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      max-width: 620px;
+      font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+      color: var(--heading);
+      line-height: 1.55;
+      position: relative;
+    }
+
+    .audience {
+      max-width: 620px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      position: relative;
+    }
+
+    .audience p {
+      font-size: clamp(1rem, 2.1vw, 1.12rem);
+      color: var(--body-text);
+      line-height: 1.6;
+    }
 
     .hero-divider {
       width: 48px;
@@ -157,6 +180,27 @@
       border: 0;
     }
 
+    /* INSIDE */
+    .inside-section {
+      padding: 0 1.5rem 3.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .inside-inner {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .inside-inner h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1;
+      color: var(--heading);
+      letter-spacing: 0.01em;
+      margin-bottom: 1.25rem;
+    }
+
     /* CREDITS */
     .credits-section {
       padding: 3.5rem 1.5rem;
@@ -217,125 +261,13 @@
       text-align: center;
     }
 
-    .cta-inner h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      line-height: 1;
+    .cta-lead {
+      font-size: clamp(1.1rem, 2.4vw, 1.3rem);
       color: var(--heading);
-      letter-spacing: 0.01em;
+      line-height: 1.55;
     }
 
-    .cta-spots {
-      margin-top: 0.85rem;
-      font-size: clamp(0.95rem, 2vw, 1.05rem);
-      color: var(--gold);
-      letter-spacing: 0.04em;
-    }
-
-    .form-mount { margin-top: 2rem; }
-
-    .progress {
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-      min-height: 1em;
-    }
-
-    .screen { display: none; text-align: left; }
-    .screen.active { display: block; }
-
-    .question {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 400;
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: var(--heading);
-      margin-bottom: 0.35rem;
-      border: 0;
-      padding: 0;
-    }
-
-    .question-hint {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-bottom: 1.1rem;
-    }
-
-    fieldset { border: 0; padding: 0; margin: 0; }
-
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .opt {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.9rem 1.1rem;
-      cursor: pointer;
-      transition: border-color 0.18s, background 0.18s;
-      font-size: 0.98rem;
-      color: var(--body-text);
-      line-height: 1.4;
-    }
-
-    .opt:hover { border-color: var(--border-strong); }
-
-    .opt input {
-      appearance: none;
-      -webkit-appearance: none;
-      flex: 0 0 auto;
-      width: 18px;
-      height: 18px;
-      border: 1px solid var(--border-strong);
-      background: transparent;
-      cursor: pointer;
-      position: relative;
-      transition: border-color 0.18s, background 0.18s;
-    }
-
-    .opt input[type="radio"] { border-radius: 50%; }
-    .opt input[type="checkbox"] { border-radius: 4px; }
-
-    .opt input:checked {
-      border-color: var(--gold);
-      background: var(--gold);
-    }
-
-    .opt input[type="radio"]:checked::after {
-      content: '';
-      position: absolute;
-      inset: 4px;
-      border-radius: 50%;
-      background: var(--bg);
-    }
-
-    .opt input[type="checkbox"]:checked::after {
-      content: '';
-      position: absolute;
-      left: 5px;
-      top: 1px;
-      width: 5px;
-      height: 10px;
-      border: solid var(--bg);
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
-
-    .opt:has(input:checked) {
-      border-color: var(--gold);
-      background: rgba(217, 178, 105, 0.09);
-      color: var(--heading);
-    }
-
-    .opt input:focus-visible { outline: 2px solid var(--gold-strong); outline-offset: 2px; }
+    .form-mount { margin-top: 1.75rem; text-align: left; }
 
     /* TEXT INPUTS */
     .field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.85rem; }
@@ -346,13 +278,9 @@
       line-height: 1.5;
     }
 
-    .field .optional { color: var(--muted); }
-
     input[type="text"],
     input[type="email"],
-    input[type="tel"],
-    input[type="url"],
-    textarea {
+    input[type="tel"] {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 6px;
@@ -366,12 +294,8 @@
       transition: border-color 0.2s;
     }
 
-    textarea { resize: vertical; min-height: 96px; line-height: 1.6; }
-
-    input::placeholder, textarea::placeholder { color: #6f6455; }
-    input:focus, textarea:focus { border-color: var(--gold); }
-
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+    input::placeholder { color: #6f6455; }
+    input:focus { border-color: var(--gold); }
 
     /* BUTTONS */
     .actions {
@@ -402,17 +326,6 @@
     .btn-primary:hover { background: var(--gold-btn-hover); }
     .btn-primary:active { transform: scale(0.99); }
     .btn-primary:disabled { background: #6d604a; color: #b9ad99; cursor: not-allowed; }
-
-    .btn-back {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      flex: 0 0 auto;
-      font-size: 1.1rem;
-      padding: 0.9rem 1.2rem;
-    }
-
-    .btn-back:hover { color: var(--heading); border-color: var(--border-strong); }
 
     .btn:focus-visible { outline: 2px solid var(--gold-strong); outline-offset: 2px; }
 
@@ -480,7 +393,6 @@
     @media (max-width: 600px) {
       .hero { padding: 3.5rem 1.25rem 2rem; }
       .testimonial-screenshot { max-width: 100%; }
-      .grid-2 { grid-template-columns: 1fr; gap: 0; }
       .cta-section { padding: 3rem 1.25rem; }
     }
   </style>
@@ -533,8 +445,8 @@
         "@type": "WebPage",
         "@id": "https://joinmusicalive.com/#webpage",
         "url": "https://joinmusicalive.com/",
-        "name": "Music Alive: Play What You Hear",
-        "description": "One-on-one coaching for musicians who want to improvise in any genre, learn by ear on the spot, and groove so it feels good when people hear them play.",
+        "name": "Music Alive: Feel Like a Real Musician",
+        "description": "Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts.",
         "inLanguage": "en",
         "isPartOf": { "@id": "https://joinmusicalive.com/#website" },
         "about": { "@id": "https://joinmusicalive.com/#service" },
@@ -543,7 +455,7 @@
       {
         "@type": "Service",
         "@id": "https://joinmusicalive.com/#service",
-        "name": "Music Alive one-on-one coaching",
+        "name": "Music Alive free video series and mentorship",
         "serviceType": "Music instruction",
         "provider": { "@id": "https://treehousemusic.org/#organization" },
         "areaServed": "Worldwide",
@@ -561,7 +473,7 @@
         "@type": "VideoObject",
         "@id": "https://joinmusicalive.com/#video",
         "name": "Music Alive: Marwan Nassar",
-        "description": "Marwan Nassar introduces Music Alive, one-on-one coaching for musicians who want to improvise in any genre and learn by ear on the spot.",
+        "description": "Marwan Nassar introduces Music Alive: how to stop memorizing shapes and start feeling like a real musician.",
         "thumbnailUrl": "https://i.ytimg.com/vi/QQeSR6mP7M0/maxresdefault.jpg",
         "uploadDate": "2026-06-14T00:00:00-07:00",
         "embedUrl": "https://www.youtube.com/embed/QQeSR6mP7M0",
@@ -576,16 +488,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Play What<br><span>You Hear</span></h1>
+    <h1>How to stop memorizing shapes and start <span>feeling like a real musician</span></h1>
+    <p class="hero-sub">Learn to improvise and jam with anyone, play songs by ear, and develop a relationship with music that feels good, and lasts.</p>
     <div class="hero-divider"></div>
-    <ul class="subheads">
-      <li>Make music part of your life again, not something you used to do</li>
-      <li>Pick up your instrument without talking yourself out of it</li>
-      <li>Improvise without your fingers falling into the same old patterns</li>
-      <li>Hear a song and play along, without looking anything up</li>
-      <li>Play in time, with a groove people feel</li>
-      <li>Jam with other musicians, and know enough theory to speak their language</li>
-    </ul>
+    <div class="audience">
+      <p>For the people who are tired of just learning songs and still feel like they don't actually understand music.</p>
+      <p>For the people who are afraid they lost their spark because they don't know how to get out of a musical rut.</p>
+    </div>
   </section>
 
   <!-- VIDEO -->
@@ -601,14 +510,26 @@
     </div>
   </section>
 
+  <!-- INSIDE -->
+  <section class="inside-section">
+    <div class="inside-inner">
+      <h2>Inside, you'll learn:</h2>
+      <ul class="subheads">
+        <li>How you can take the notes in your head and put them on your instrument</li>
+        <li>Why it's hard to build a relationship with music that doesn't feel like a chore</li>
+        <li>What to practice when you feel like you are missing direction</li>
+        <li>How to jam with anyone without feeling like an impostor</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- CTA ONE -->
   <section class="cta-section" id="join">
     <div class="cta-inner">
-      <h2>Looking for 1-on-1 guidance?</h2>
-      <p class="cta-spots">Limited spots available</p>
+      <p class="cta-lead">Sign up for free videos, invites to live group calls, and first access to a private mentorship group.</p>
       <div class="form-mount" data-form="a"></div>
       <noscript>
-        <p>This application needs JavaScript. Email <a href="mailto:marwan@treehousemusic.org">marwan@treehousemusic.org</a> and we will take it from there.</p>
+        <p>This sign-up form needs JavaScript. Email <a href="mailto:marwan@treehousemusic.org">marwan@treehousemusic.org</a> to sign up.</p>
       </noscript>
     </div>
   </section>
@@ -640,8 +561,7 @@
   <!-- CTA TWO -->
   <section class="cta-section" id="join-2">
     <div class="cta-inner">
-      <h2>Looking for 1-on-1 guidance?</h2>
-      <p class="cta-spots">Limited spots available</p>
+      <p class="cta-lead">Sign up for free videos, invites to live group calls, and first access to a private mentorship group.</p>
       <div class="form-mount" data-form="b"></div>
     </div>
   </section>
@@ -654,244 +574,48 @@
   <script>
     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xljeeqen';
 
-    const Q1_OPTIONS = [
-      'College student',
-      'Adult hobbyist',
-      'Pro or semi-pro musician',
-      'Coming back to music after a break'
-    ];
-
-    const Q2_OPTIONS = [
-      'Improvisation and soloing',
-      'Practical theory',
-      'Ears and learning by ear',
-      'Speed and chops',
-      'Pocket and groove'
-    ];
-
-    function escapeHtml(str) {
-      return String(str).replace(/[&<>"']/g, function (c) {
-        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-      });
-    }
-
-    function buildFormHtml(ns) {
-      const radios = Q1_OPTIONS.map(function (opt, i) {
-        return '<label class="opt"><input type="radio" name="' + ns + '-q1" value="' + escapeHtml(opt) + '" id="' + ns + '-q1-' + i + '" /><span>' + escapeHtml(opt) + '</span></label>';
-      }).join('');
-
-      const checks = Q2_OPTIONS.map(function (opt, i) {
-        return '<label class="opt"><input type="checkbox" name="' + ns + '-q2" value="' + escapeHtml(opt) + '" id="' + ns + '-q2-' + i + '" /><span>' + escapeHtml(opt) + '</span></label>';
-      }).join('');
-
-      return [
-        '<p class="progress" data-role="progress"></p>',
-
-        // Screen 0: intro
-        '<div class="screen active" data-screen="0">',
-        '  <div class="actions"><button type="button" class="btn btn-primary" data-action="next">Next</button></div>',
-        '</div>',
-
-        // Screen 1: Q1
-        '<div class="screen" data-screen="1">',
-        '  <fieldset>',
-        '    <legend class="question">What best describes you?</legend>',
-        '    <p class="question-hint">Choose one.</p>',
-        '    <div class="options">' + radios + '</div>',
-        '  </fieldset>',
-        '  <p class="form-error" data-role="error"></p>',
-        '  <div class="actions">',
-        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
-        '    <button type="button" class="btn btn-primary" data-action="next">Next</button>',
-        '  </div>',
-        '</div>',
-
-        // Screen 2: Q2
-        '<div class="screen" data-screen="2">',
-        '  <fieldset>',
-        '    <legend class="question">What are you most interested in improving over the next 12 months?</legend>',
-        '    <p class="question-hint">Choose as many as you like.</p>',
-        '    <div class="options">' + checks + '</div>',
-        '  </fieldset>',
-        '  <p class="form-error" data-role="error"></p>',
-        '  <div class="actions">',
-        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
-        '    <button type="button" class="btn btn-primary" data-action="next">Next</button>',
-        '  </div>',
-        '</div>',
-
-        // Screen 3: Q3
-        '<div class="screen" data-screen="3">',
-        '  <fieldset>',
-        '    <legend class="question">Are you ready to spend time and money getting to where you want to go?</legend>',
-        '    <div class="options">',
-        '      <label class="opt"><input type="radio" name="' + ns + '-q3" value="Yes" /><span>Yes</span></label>',
-        '      <label class="opt"><input type="radio" name="' + ns + '-q3" value="No" /><span>No</span></label>',
-        '    </div>',
-        '  </fieldset>',
-        '  <p class="form-error" data-role="error"></p>',
-        '  <div class="actions">',
-        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
-        '    <button type="button" class="btn btn-primary" data-action="next">Next</button>',
-        '  </div>',
-        '</div>',
-
-        // Screen 4: details
-        '<div class="screen" data-screen="4">',
-        '  <div class="grid-2">',
-        '    <div class="field"><label for="' + ns + '-first">First name</label><input type="text" id="' + ns + '-first" autocomplete="given-name" /></div>',
-        '    <div class="field"><label for="' + ns + '-last">Last name</label><input type="text" id="' + ns + '-last" autocomplete="family-name" /></div>',
-        '  </div>',
-        '  <div class="field"><label for="' + ns + '-email">Email address</label><input type="email" id="' + ns + '-email" autocomplete="email" /></div>',
-        '  <div class="field"><label for="' + ns + '-phone">Phone number</label><input type="tel" id="' + ns + '-phone" autocomplete="tel" /></div>',
-        '  <div class="field">',
-        '    <label for="' + ns + '-rec">Do you have recordings of yourself playing? <span class="optional">(optional, paste a link)</span></label>',
-        '    <input type="url" id="' + ns + '-rec" placeholder="Google Drive, YouTube, SoundCloud, Instagram" />',
-        '  </div>',
-        '  <div class="field">',
-        '    <label for="' + ns + '-dream">What would your dream version look like for your musicianship 12 months from now?</label>',
-        '    <textarea id="' + ns + '-dream" rows="4"></textarea>',
-        '  </div>',
-        '  <p class="form-error" data-role="error"></p>',
-        '  <div class="actions">',
-        '    <button type="button" class="btn btn-back" data-action="back">Back</button>',
-        '    <button type="button" class="btn btn-primary" data-action="submit">Submit</button>',
-        '  </div>',
-        '  <p class="form-note">No spam. Unsubscribe any time.</p>',
-        '</div>',
-
-        // Screen 5: disqualified
-        '<div class="screen" data-screen="5">',
-        '  <div class="notice">',
-        '    <strong>Thank you for your interest.</strong>',
-        '    We are currently only accepting musicians with the time and resources to improve their musicianship over the next 6-12 months.',
-        '  </div>',
-        '  <div class="actions"><button type="button" class="btn btn-back" data-action="back">Back</button></div>',
-        '</div>',
-
-        // Screen 6: success
-        '<div class="screen" data-screen="6">',
-        '  <div class="notice">',
-        '    <strong>You are in.</strong>',
-        '    Check your inbox (or spam folder, just in case) for what comes next. Talk soon.',
-        '  </div>',
-        '</div>'
-      ].join('');
-    }
-
     function initForm(mount) {
       const ns = mount.getAttribute('data-form');
-      mount.innerHTML = buildFormHtml(ns);
+      mount.innerHTML = [
+        '<div data-role="fields">',
+        '  <div class="field"><label for="' + ns + '-first">First name</label><input type="text" id="' + ns + '-first" autocomplete="given-name" /></div>',
+        '  <div class="field"><label for="' + ns + '-email">Email</label><input type="email" id="' + ns + '-email" autocomplete="email" /></div>',
+        '  <div class="field"><label for="' + ns + '-phone">Phone number</label><input type="tel" id="' + ns + '-phone" autocomplete="tel" /></div>',
+        '  <p class="form-error" data-role="error"></p>',
+        '  <div class="actions"><button type="button" class="btn btn-primary" data-action="submit">Sign up</button></div>',
+        '  <p class="form-note">No spam. Unsubscribe any time.</p>',
+        '</div>',
+        '<div class="notice" data-role="success" style="display:none">',
+        '  <strong>You are in.</strong>',
+        '  Check your inbox (or spam folder, just in case) for what comes next. Talk soon.',
+        '</div>'
+      ].join('');
 
-      const screens = mount.querySelectorAll('[data-screen]');
-      const progress = mount.querySelector('[data-role="progress"]');
-      const TOTAL = 4;
-      let current = 0;
-      const history = [];
+      const fields = mount.querySelector('[data-role="fields"]');
+      const success = mount.querySelector('[data-role="success"]');
+      const error = mount.querySelector('[data-role="error"]');
+      const btn = mount.querySelector('[data-action="submit"]');
 
-      function get(id) { return mount.querySelector('#' + ns + '-' + id); }
-      function val(id) { return get(id).value.trim(); }
+      function val(id) { return mount.querySelector('#' + ns + '-' + id).value.trim(); }
 
-      function showError(screen, msg) {
-        const el = screen.querySelector('[data-role="error"]');
-        if (!el) return;
-        el.textContent = msg;
-        el.style.display = 'block';
+      function showError(msg) {
+        error.textContent = msg;
+        error.style.display = 'block';
       }
 
-      function clearError(screen) {
-        const el = screen.querySelector('[data-role="error"]');
-        if (el) el.style.display = 'none';
-      }
-
-      function render() {
-        screens.forEach(function (s) {
-          s.classList.toggle('active', Number(s.getAttribute('data-screen')) === current);
-        });
-        if (current >= 1 && current <= TOTAL) {
-          progress.textContent = 'Step ' + current + ' of ' + TOTAL;
-        } else {
-          progress.textContent = '';
-        }
-      }
-
-      function goTo(next) {
-        history.push(current);
-        current = next;
-        render();
-      }
-
-      function goBack() {
-        if (!history.length) return;
-        current = history.pop();
-        render();
-      }
-
-      function checkedValue(name) {
-        const el = mount.querySelector('input[name="' + ns + '-' + name + '"]:checked');
-        return el ? el.value : '';
-      }
-
-      function checkedValues(name) {
-        return Array.prototype.map.call(
-          mount.querySelectorAll('input[name="' + ns + '-' + name + '"]:checked'),
-          function (el) { return el.value; }
-        );
-      }
-
-      function validateAndAdvance(screen) {
-        clearError(screen);
-
-        if (current === 0) { goTo(1); return; }
-
-        if (current === 1) {
-          if (!checkedValue('q1')) { showError(screen, 'Please choose the option that best describes you.'); return; }
-          goTo(2); return;
-        }
-
-        if (current === 2) {
-          if (!checkedValues('q2').length) { showError(screen, 'Please choose at least one.'); return; }
-          goTo(3); return;
-        }
-
-        if (current === 3) {
-          const answer = checkedValue('q3');
-          if (!answer) { showError(screen, 'Please choose yes or no.'); return; }
-          goTo(answer === 'Yes' ? 4 : 5);
-          return;
-        }
-      }
-
-      async function submit(screen, btn) {
-        clearError(screen);
+      async function submit() {
+        error.style.display = 'none';
 
         const first = val('first');
-        const last = val('last');
         const email = val('email');
         const phone = val('phone');
-        const dream = val('dream');
 
-        if (!first) { showError(screen, 'Please enter your first name.'); return; }
-        if (!last) { showError(screen, 'Please enter your last name.'); return; }
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError(screen, 'Please enter a valid email address.'); return; }
-        if (!phone) { showError(screen, 'Please enter your phone number.'); return; }
-        if (!dream) { showError(screen, 'Please tell us what your dream version looks like.'); return; }
+        if (!first) { showError('Please enter your first name.'); return; }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
+        if (!phone) { showError('Please enter your phone number.'); return; }
 
         btn.disabled = true;
         btn.textContent = 'Sending...';
-
-        const payload = {
-          _subject: 'New Music Alive application',
-          first_name: first,
-          last_name: last,
-          email: email,
-          phone_number: phone,
-          describes_you: checkedValue('q1'),
-          improve_focus: checkedValues('q2').join(', '),
-          ready_to_invest: checkedValue('q3'),
-          recordings_link: val('rec'),
-          dream_12_months: dream
-        };
 
         try {
           const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -900,35 +624,28 @@
               'Content-Type': 'application/json',
               'Accept': 'application/json'
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify({
+              _subject: 'New Music Alive signup',
+              first_name: first,
+              email: email,
+              phone_number: phone
+            })
           });
 
-          if (response.ok) {
-            goTo(6);
-          } else {
-            const data = await response.json().catch(function () { return {}; });
-            const message = data.errors ? data.errors.map(function (e) { return e.message; }).join(', ') : 'Submission failed';
-            throw new Error(message);
-          }
+          if (!response.ok) throw new Error('Submission failed');
+          fields.style.display = 'none';
+          success.style.display = 'block';
         } catch (err) {
-          showError(screen, 'Something went wrong. Please try again or email marwan@treehousemusic.org.');
+          showError('Something went wrong. Please try again or email marwan@treehousemusic.org.');
           btn.disabled = false;
-          btn.textContent = 'Submit';
+          btn.textContent = 'Sign up';
         }
       }
 
-      mount.addEventListener('click', function (e) {
-        const btn = e.target.closest('[data-action]');
-        if (!btn) return;
-        const screen = btn.closest('[data-screen]');
-        const action = btn.getAttribute('data-action');
-
-        if (action === 'back') { goBack(); return; }
-        if (action === 'next') { validateAndAdvance(screen); return; }
-        if (action === 'submit') { submit(screen, btn); return; }
+      btn.addEventListener('click', submit);
+      mount.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && e.target.tagName === 'INPUT') submit();
       });
-
-      render();
     }
 
     document.querySelectorAll('.form-mount').forEach(initForm);
