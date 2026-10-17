@@ -592,6 +592,7 @@
 
   <script>
     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xljeeqen';
+    const KIT_FORM_ENDPOINT = 'https://app.kit.com/forms/9630754/subscriptions';
 
     function initForm(mount) {
       const ns = mount.getAttribute('data-form');
@@ -636,22 +637,47 @@
         btn.disabled = true;
         btn.textContent = 'Sending...';
 
-        try {
-          const response = await fetch(FORMSPREE_ENDPOINT, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-              _subject: 'New Music Alive signup',
-              first_name: first,
-              email: email,
-              phone_number: phone
-            })
-          });
+        // Kit enrolls the subscriber in the nurture sequence; Formspree keeps a
+        // backup copy and notifies Marwan. Either one landing counts as success.
+        const kitBody = new URLSearchParams({
+          email_address: email,
+          first_name: first,
+          'fields[phone]': phone
+        });
 
-          if (!response.ok) throw new Error('Submission failed');
+        const kitRequest = fetch(KIT_FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: kitBody
+        }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+
+        const formspreeRequest = fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: 'New Music Alive signup',
+            first_name: first,
+            email: email,
+            phone_number: phone
+          })
+        }).then(function (r) { return r.ok; }).catch(function () { return false; });
+
+        try {
+          const results = await Promise.all([kitRequest, formspreeRequest]);
+          const kit = results[0];
+          const formspreeOk = results[1];
+
+          // Kit's bot guard: send the person to Kit's check page to confirm.
+          if (kit && kit.status === 'quarantined' && kit.url) {
+            window.location.href = kit.url;
+            return;
+          }
+
+          const kitOk = kit && kit.status === 'success';
+          if (!kitOk && !formspreeOk) throw new Error('Submission failed');
           fields.style.display = 'none';
           success.style.display = 'block';
         } catch (err) {
