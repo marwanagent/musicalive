@@ -44,19 +44,19 @@
       --error: #b4472c;
     }
 
-    /* Dark highlight bands in the original Music Alive palette */
+    /* Warm espresso highlight bands in the Music Alive palette */
     .cta-section {
-      --bg: #16110d;
-      --bg-soft: #1e1813;
-      --card: #241d16;
+      --bg: #2e241b;
+      --bg-soft: #352a20;
+      --card: #3b2e23;
       --gold: #d9b269;
       --gold-strong: #e6c485;
       --gold-btn: #c8a96e;
       --gold-btn-hover: #dcbd82;
       --heading: #f2ece1;
-      --body-text: #c0b4a2;
+      --body-text: #cfc1ad;
       --muted: #8d8271;
-      --border: rgba(217, 178, 105, 0.16);
+      --border: rgba(217, 178, 105, 0.26);
       --border-strong: rgba(217, 178, 105, 0.38);
       --error: #e29078;
     }
@@ -270,7 +270,10 @@
       padding: 4rem 1.5rem;
       display: flex;
       justify-content: center;
-      background: var(--bg);
+      background:
+        radial-gradient(ellipse 70% 90% at 50% 0%, rgba(217, 178, 105, 0.16) 0%, transparent 70%),
+        linear-gradient(180deg, #352a20 0%, #271e16 100%);
+      background-color: var(--bg);
       color: var(--heading);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
